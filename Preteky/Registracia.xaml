@@ -1,0 +1,39 @@
+﻿<Window x:Class="Preteky.Registracia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Preteky"
+        mc:Ignorable="d"
+        Title="Registracia pretekarov" Height="400" Width="300" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Right"  VerticalAlignment="Center" Orientation="Horizontal" Margin=" 0,0,80,0" >
+            <Label Name="_Meno" Content="Meno: " Target="{Binding ElementName=menoTextBox}"/>
+            <TextBox Name="menoTextBox" Width="150"/>
+        </StackPanel >
+        <StackPanel Grid.Row=" 1" HorizontalAlignment="Right"  VerticalAlignment="Center" Orientation="Horizontal" Margin=" 0,0,80,0" >
+            <Label Name="_Vek" Content="Vek: " Target="{Binding ElementName=vekTextBox}"/>
+            <TextBox Name="vekTextBox" Width="150"/>
+        </StackPanel >
+        <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Row=" 2" Orientation="Horizontal" >
+            <TextBlock Name="pohlavieTextBlock" Text="Pohlavie" VerticalAlignment ="Center" />
+            <StackPanel Orientation="Vertical">
+                <RadioButton Name="muzRadioButton" Content="Muz" Margin="20,0,0,10" IsChecked="true"/>
+                <RadioButton Name="zenaRadioButton"  Content="Zena" Margin=" 20,0,0,0" />
+            </StackPanel >
+        </StackPanel >
+        <StackPanel HorizontalAlignment="Right"   VerticalAlignment="Center" Grid.Row="3" Orientation="Horizontal" Margin=" 0,0,80,0" >
+            <TextBlock Text="Krajina: " />
+            <ComboBox Name="krajinaComboBox" Width=" 150" Margin=" 5,0,0,0" ItemsSource="{Binding krajiny}"  />
+        </StackPanel >
+        <Button Name="OKButton2" Content="OK" Width="150" Grid.Row=" 4" Height=" 30" IsDefault="True" Click="OKButton2_Click" />
+
+    </Grid>
+</Window>

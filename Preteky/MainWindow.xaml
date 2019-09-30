@@ -1,0 +1,25 @@
+﻿<Window x:Class="Preteky.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Preteky"
+        mc:Ignorable="d"
+        Title="Preteky" Height="450" Width="700" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Image Source="beh.jpg" Stretch="Fill"      />
+        <DockPanel Height="25" VerticalAlignment="Top" >
+            <Menu DockPanel.Dock="Top" >
+                <MenuItem Header="Organizacia" >
+                    <MenuItem Name="registraciaMenu" Header="Registracia ucastnikov" Click="RegistraciaMenu_Click"/>
+                    <MenuItem Name="nastavenieMenu" Header = "Parametre pretekov" Click="NastavenieMenu_Click"/>
+                    <MenuItem Name="priebehPretekovMenu" Header="Priebeh Pretekov" Click="PriebehPretekovMenu_Click"/>
+                    <MenuItem Name="exportVysledok" Header="Exportuj vysledky" Click="ExportVysledok_Click"/>
+                    <MenuItem Name="anulujMenu" Header="Reset" Click="AnulujMenu_Click"/>
+                </MenuItem >
+            </Menu >
+        </DockPanel >
+        
+
+    </Grid>
+</Window>
